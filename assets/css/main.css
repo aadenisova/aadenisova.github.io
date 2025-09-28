@@ -1,0 +1,303 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    font-family: Courier, monospace, "Apple System", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+    line-height: 1.8;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+/* Layout */
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.site-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-title a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    text-decoration: underline;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.language-switcher {
+    font-size: 0.9rem;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.language-switcher a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+.page-content {
+    min-height: calc(100vh - 200px);
+    padding-bottom: 2rem;
+}
+
+/* Posts and pages */
+.post, .poem, .project {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.poem {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.post-header, .poem-header, .project-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.post-title, .poem-title, .project-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.post-content, .poem-content, .project-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Poetry specific styles */
+.poem-content {
+    white-space: pre-line;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.0rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.poem-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Project specific styles */
+.project-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 1px solid #e0e0e0;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .social-links {
+        align-self: flex-end;
+    }
+    
+    .post-title, .poem-title, .project-title {
+        font-size: 2rem;
+    }
+    
+    .wrapper {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .social-links {
+        align-self: flex-start;
+    }
+    
+    .post-title, .poem-title, .project-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Contact form styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.contact-form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-form button:hover {
+    background: #333;
+}
+
+/* Home page specific */
+.home-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.home-intro h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.home-intro p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}

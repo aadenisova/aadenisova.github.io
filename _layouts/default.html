@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+    
+    {% if page.lang == 'ru' %}
+    <link rel="alternate" hreflang="en" href="{{ page.url | replace: '/ru/', '/' | absolute_url }}">
+    {% else %}
+    <link rel="alternate" hreflang="ru" href="{{ page.url | prepend: '/ru' | absolute_url }}">
+    {% endif %}
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <nav class="site-nav">
+                <div class="site-title">
+                    {% if page.lang == 'ru' %}
+                        <a href="{{ '/ru/' | relative_url }}">{{ site.title }}</a>
+                    {% else %}
+                        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                    {% endif %}
+                </div>
+                
+                <div class="nav-links">
+                    {% if page.lang == 'ru' %}
+                        <a href="{{ '/ru/about' | relative_url }}">О себе</a>
+                        <a href="{{ '/ru/poetry' | relative_url }}">Поэзия</a>
+                        <a href="{{ '/ru/projects' | relative_url }}">Проекты</a>
+                        <a href="{{ '/ru/contact' | relative_url }}">Контакты</a>
+                    {% else %}
+                        <a href="{{ '/about' | relative_url }}">About</a>
+                        <a href="{{ '/poetry' | relative_url }}">Poetry</a>
+                        <a href="{{ '/projects' | relative_url }}">Projects</a>
+                        <a href="{{ '/contact' | relative_url }}">Contact</a>
+                    {% endif %}
+                </div>
+                
+                <div class="language-switcher">
+                    {% if page.lang == 'ru' %}
+                        <a href="{{ page.url | replace: '/ru/', '/' }}">EN</a>
+                    {% else %}
+                        <a href="{{ page.url | prepend: '/ru' }}">RU</a>
+                    {% endif %}
+                </div>
+                
+                <div class="social-links">
+                    <a href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:{{ site.social.email }}">Email</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. {% if page.lang == 'ru' %}Все права защищены.{% else %}All rights reserved.{% endif %}</p>
+        </div>
+    </footer>
+</body>
+</html>

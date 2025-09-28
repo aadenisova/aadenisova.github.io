@@ -1,0 +1,52 @@
+# Site settings
+title: "Alexandra Denisova"
+description: "Personal website of Alexandra Denisova - scientist, bioinformatician, and poet"
+baseurl: ""
+url: "https://aadenisova.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  poetry:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "poetry"
+    values:
+      layout: "poem"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Language support
+languages: ["en", "ru"]
+default_lang: "en"
+exclude_from_localizations: ["assets", "images", "js", "css"]
+
+# Social links
+social:
+  github: "https://github.com/aadenisova"
+  email: "alexandraa.denisova@gmail.com"
