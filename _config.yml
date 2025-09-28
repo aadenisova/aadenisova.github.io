@@ -11,12 +11,12 @@ permalink: pretty
 
 # Collections
 collections:
-  poetry:
+  poems:
     output: true
-    permalink: /:collection/:name/
+    permalink: /poetry/:name/
   projects:
     output: true
-    permalink: /:collection/:name/
+    permalink: /projects/:name/
 
 # Defaults
 defaults:
@@ -27,7 +27,7 @@ defaults:
       layout: "default"
   - scope:
       path: ""
-      type: "poetry"
+      type: "poems"
     values:
       layout: "poem"
   - scope:

@@ -4,6 +4,10 @@ title: "Projects"
 lang: en
 ---
 
-## Innovation in Birds
+## Research Projects
 
-I am studying innovation rate in birds.
+{% for project in site.projects %}
+  {% if project.lang == 'en' %}
+- **[{{ project.title }}]({{ project.url }})** - {{ project.date | date: "%B %Y" }}
+  {% endif %}
+{% endfor %}

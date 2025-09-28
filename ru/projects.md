@@ -4,8 +4,10 @@ title: "Проекты"
 lang: ru
 ---
 
-## Инновационность у птиц
+## Научные проекты
 
-Я изучаю скорость инноваций у птиц.
-
-<!-- ![Дерево птиц]({{ '/assets/images/birds_tree.png' | relative_url }}) -->
+{% for project in site.projects %}
+  {% if project.lang == 'en' %}
+- **[{{ project.title }}]({{ project.url }})** - {{ project.date | date: "%B %Y" }}
+  {% endif %}
+{% endfor %}

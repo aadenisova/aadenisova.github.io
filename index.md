@@ -7,6 +7,10 @@ lang: en
 <div class="home-intro">
     <h1>Alexandra Denisova</h1>
     <p>Scientist, bioinformatician, and poet exploring the evolution of cognitive abilities in birds and the convergence between birds and humans.</p>
+    
+    <!-- <div class="home-image">
+        <img src="{{ '/assets/images/rocks.png' | relative_url }}" alt="Rocks" />
+    </div> -->
 </div>
 
 <div class="post-content">
@@ -23,4 +27,20 @@ lang: en
     <p>I strive to live in a world where the pursuit of science is a natural extension of human aspirations. At the same time, doing science is inseparable for me and is an art.</p>
 
     <p>Here I plan to share my notes, projects, and poetry, as freely as I can.</p>
+</div>
+
+<div class="featured-poem">
+    <h2>Featured Poem</h2>
+    <div class="poem-preview">
+        <h3><a href="/poetry/vyatka/">Vyatka</a></h3>
+        <div class="poem-excerpt">
+            Проваливаюсь. 
+            Мягкая земля щекочет пятки,
+            Комочек застрял под ногтем,
+            Нет сил.
+            Где ты был? Может на бегах Вятки 
+            У неба горящего руки просил...
+        </div>
+        <p><a href="/poetry/vyatka/">Read full poem →</a></p>
+    </div>
 </div>
