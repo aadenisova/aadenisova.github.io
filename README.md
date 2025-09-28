@@ -1,4 +1,4 @@
-# Alexandra Denisova - Personal Website
+# Alexandra Denisova
 
 Trying to find my way in biological science
 
